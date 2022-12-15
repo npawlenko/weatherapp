@@ -1,8 +1,20 @@
 import logo from '../../assets/images/logo.png';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import './Navbar.scss';
 
 function Navbar() {
+    const location = useLocation();
+
+    const generateLink = (text, to) => {
+        const active = location.pathname === to;
+
+        return (
+            <Link to={to} className={active ? "nav-link active" : "nav-link"}>
+                {text}
+            </Link>
+        )
+    };
+
     return (
         <header className="page-header">
             <div className="container">
@@ -21,19 +33,13 @@ function Navbar() {
                     <div className="collapse navbar-collapse text-center text-lg-start" id="navbar-content">
                         <ul className="navbar-nav ms-auto me-auto">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">
-                                    Ulubione
-                                </Link>
+                                {generateLink("Ulubione", "/")}
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link active">
-                                    Strona główna
-                                </Link>
+                                {generateLink("Strona główna", "/")}
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">
-                                    O nas
-                                </Link>
+                                {generateLink("O nas", "/about")}
                             </li>
                         </ul>
 
