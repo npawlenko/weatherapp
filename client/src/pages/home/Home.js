@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         geolocation.then((response) => {
-            if(Object.keys(response).length === 0) return setAlert("Nie udało się określić twojej lokalizacji", Constants.ALERT_DANGER);
+            if(Object.keys(response).length === 0) return setAlert("Nie udało się określić twojej lokalizacji. Zezwól na udostępnianie lokalizacji tej stronie w ustawieniach przeglądarki, aby mieć dostęp do wszystkich funkcjonalności.", Constants.ALERT_DANGER);
             cityName.current.innerText = response.city;
         })
     }, []);

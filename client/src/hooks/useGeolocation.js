@@ -8,7 +8,7 @@ async function useGeolocation(force=false) {
 
     await axios.get("https://ipinfo.io/json")
         .then((response) => {
-            location = response.data;
+            location = response.data; // TODO: make similiar response to OpenWeatherMap Geolocation API
             // update localstorage
             localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(response.data));
         })
