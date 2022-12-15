@@ -8,12 +8,15 @@ import './assets/index.scss';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'jquery/dist/jquery.min';
 import {AlertProvider} from "./context/AlertContext";
+import {GeolocationProvider} from "./context/GeolocationContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AlertProvider>
-        <App />
-    </AlertProvider>
+    <GeolocationProvider>
+        <AlertProvider>
+            <App />
+        </AlertProvider>
+    </GeolocationProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

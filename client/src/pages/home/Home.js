@@ -1,18 +1,26 @@
-import {useGeolocation} from "../../hooks/useGeolocation";
 import {useEffect, useRef} from "react";
 import Constants from "../../data/constants";
 import useAlert from "../../hooks/useAlert";
+import useGeolocation from "../../hooks/useGeolocation";
 
 function Home() {
     const geolocation = useGeolocation();
     const cityName = useRef();
     const {setAlert} = useAlert();
 
-    useEffect(() => {
-        geolocation.then((response) => {
-            if(Object.keys(response).length === 0) return setAlert("Nie udało się określić twojej lokalizacji. Zezwól na udostępnianie lokalizacji tej stronie w ustawieniach przeglądarki, aby mieć dostęp do wszystkich funkcjonalności.", Constants.ALERT_DANGER);
-            cityName.current.innerText = response.city;
-        })
+    useEffect( () => {
+        geolocation.update(true).then((location) => {
+            if(Object.keys(location).length === 0) {
+                setAlert(
+                    "Nie udało się określić twojej lokalizacji. Zezwól na udostępnianie lokalizacji tej stronie" +
+                    " w ustawieniach przeglądarki, aby mieć dostęp do wszystkich funkcjonalności.",
+                    Constants.ALERT_DANGER
+                );
+            }
+            else {
+                cityName.current.innerText = location.city;
+            }
+        });
     }, []);
 
 
