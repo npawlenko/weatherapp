@@ -1,0 +1,33 @@
+@use 'src/assets/variables' as v;
+
+
+.page-footer {
+  margin-top: auto;
+
+  a {
+    text-decoration: none;
+    color: #9c9c9c;
+  }
+
+  .nav-footer {
+    background-color: v.$secondary-color;
+    padding: 50px 0;
+  }
+
+  .copyright {
+    font-size: 0.9em;
+    padding: 30px 0;
+  }
+}
+
+.gray-logo {
+  width: 40px;
+  filter: grayscale(1);
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    filter: grayscale(0) drop-shadow(0 0 10px v.$accent-color);
+  }
+}
+

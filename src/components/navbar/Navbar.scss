@@ -1,0 +1,28 @@
+@use 'src/assets/variables' as v;
+
+.page-header {
+  padding: 5px 0;
+  background-color: v.$secondary-color;
+  margin-bottom: 50px;
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+}
+
+#navbar-content {
+  text-transform: uppercase;
+
+  .nav-link {
+    transition: all .1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.active {
+      font-size: 1.05em;
+    }
+  }
+}

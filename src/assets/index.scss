@@ -1,0 +1,53 @@
+
+// Main styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif!important;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-main {
+  margin: 50px 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700!important;
+}
+
+.fs-7 {
+  font-size: 0.8em;
+}
+
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+.icon-onion {
+  background: url(images/onion.png);
+  background-size: cover;
+}
+
+.icon-search {
+  background: url(images/search.png);
+  background-size: cover;
+}
