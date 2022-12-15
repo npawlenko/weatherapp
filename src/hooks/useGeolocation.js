@@ -12,10 +12,30 @@ async function useGeolocation(force=false) {
             // update localstorage
             localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(response.data));
         })
-        .catch(() => {
+        .catch(async () => {
             location = {};
+            await getNavigatorGeolocation().then((coords) => {
+                    // TODO: call OpenWeatherMap Geolocation API
+                }
+            );
         });
+    console.log(location);
     return location;
+}
+
+async function getNavigatorGeolocation() {
+    let coords;
+    if('geolocation' in navigator) {
+        await new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition((position) => {
+                    coords = position.coords;
+                    resolve(coords);
+                },
+                (error) => {
+                    reject(error);
+                }
+            ));
+    }
+    return coords;
 }
 
 export {useGeolocation}
