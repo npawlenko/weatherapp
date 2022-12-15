@@ -1,18 +1,19 @@
-import {useGeolocation} from "../../hooks/geolocation";
+import {useGeolocation} from "../../hooks/useGeolocation";
 import {useEffect, useRef} from "react";
+import Constants from "../../data/constants";
+import useAlert from "../../hooks/useAlert";
 
 function Home() {
     const geolocation = useGeolocation();
     const cityName = useRef();
+    const {setAlert} = useAlert();
 
     useEffect(() => {
         geolocation.then((response) => {
-            console.log(response);
+            if(Object.keys(response).length === 0) return setAlert("Nie udało się określić twojej lokalizacji", Constants.ALERT_DANGER);
             cityName.current.innerText = response.city;
-        }).catch((error) => {
-            console.error(error);
         })
-    }, [geolocation]);
+    }, []);
 
 
     return (

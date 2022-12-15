@@ -7,10 +7,13 @@ import 'bootstrap/scss/bootstrap.scss';
 import './assets/index.scss';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'jquery/dist/jquery.min';
+import {AlertProvider} from "./context/AlertContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+    <AlertProvider>
+        <App />
+    </AlertProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
