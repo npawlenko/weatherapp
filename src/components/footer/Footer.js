@@ -57,7 +57,7 @@ function Footer() {
                             <p className="mb-0">Copyright &copy; 2022 WeatherApp</p>
                         </div>
                         <div className="col text-end">
-                            <p className="mb-0">Zasilane przez <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a></p>
+                            <p className="mb-0">Zasilane przez <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer">OpenWeatherMap API</a></p>
                         </div>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ function Home() {
         }).catch((error) => {
             console.error(error);
         })
-    }, []);
+    }, [geolocation]);
 
 
     return (
@@ -22,7 +22,7 @@ function Home() {
                     <div className="col-lg-8">
                         <h1>Dzień dobry!</h1>
                         <h4>Pogoda na dziś w <span ref={cityName} className="fw-light">twojej miejscowości</span></h4>
-                        <p>Dzisiaj będzie mroźnie, ubierz się w kilka warstw <span className="icon icon-onion"></span></p>
+                        <p>Dzisiaj będzie mroźnie, ubierz się w kilka warstw <span className="icon icon-onion"/></p>
                     </div>
 
                     <div className="col-lg-4">
