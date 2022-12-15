@@ -12,7 +12,7 @@ async function useGeolocation(force=false) {
             // update localstorage
             localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(response.data));
         })
-        .catch((err) => {
+        .catch(() => {
             location = {};
         });
     return location;
