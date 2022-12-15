@@ -9,7 +9,7 @@ function Footer() {
                 <div className="container">
                     <div className="row align-items-center">
 
-                        <div className="col-12 col-lg-6">
+                        <div className="col-12 col-lg-6 mb-5 mb-lg-0">
                             <div className="row align-items-center justify-content-center" id="appDescription">
                                 <div className="col-1 me-3">
                                     <img className="gray-logo mb-2" src={logo} alt="logo" />
@@ -24,7 +24,7 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="col-12 col-lg-3">
+                        <div className="col-12 col-lg-3 mb-5 mb-lg-0">
                             <h5>Przydatne linki</h5>
                             <ul className="list">
                                 <li><Link to="/">Link</Link></li>
@@ -53,10 +53,10 @@ function Footer() {
             <div className="copyright">
                 <div className="container">
                     <div className="row">
-                        <div className="col">
+                        <div className="col-12 col-lg-6">
                             <p className="mb-0">Copyright &copy; 2022 WeatherApp</p>
                         </div>
-                        <div className="col text-end">
+                        <div className="col-12 col-lg-6 text-lg-end">
                             <p className="mb-0">Zasilane przez <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer">OpenWeatherMap API</a></p>
                         </div>
                     </div>
