@@ -2,10 +2,21 @@ import "./About.scss";
 import openweather from "../../assets/images/openweather-logo.png";
 import ipinfo from "../../assets/images/ipinfo-logo.png";
 import img from "../../assets/images/image-placeholder.png";
+import {motion} from "framer-motion";
 
 function About() {
     return (
-        <main className="page-main">
+        <motion.main className="page-main"
+                     initial={{
+                         x: -window.innerWidth,
+                     }}
+                     animate={{
+                         x: 0,
+                     }}
+                     exit={{
+                         x: window.innerWidth,
+                     }}
+        >
             <div className="container">
                 <h1>Dowiedz się o <span className="fw-light">WeatherApp</span></h1>
                 <h4 className="space-below">Czyli mała porcja informacji o projekcie</h4>
@@ -33,7 +44,7 @@ function About() {
                     <a href="https://ipinfo.io" target="_blank" rel="norefferer"><img src={ipinfo} alt="ipinfo.io" /></a>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
 }
 
