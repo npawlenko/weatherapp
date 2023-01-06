@@ -2,6 +2,7 @@ import {useEffect, useRef} from "react";
 import Constants from "../../data/constants";
 import useAlert from "../../hooks/useAlert";
 import useGeolocation from "../../hooks/useGeolocation";
+import {motion} from "framer-motion";
 
 function Home() {
     const geolocation = useGeolocation();
@@ -9,7 +10,7 @@ function Home() {
     const {setAlert} = useAlert();
 
     useEffect( () => {
-        geolocation.update(true).then((location) => {
+        geolocation.update().then((location) => {
             if(Object.keys(location).length === 0) {
                 setAlert(
                     "Nie udało się określić twojej lokalizacji. Zezwól na udostępnianie lokalizacji tej stronie" +
@@ -25,7 +26,17 @@ function Home() {
 
 
     return (
-        <main className="page-main">
+        <motion.main className="page-main"
+                     initial={{
+                         x: -window.innerWidth,
+                     }}
+                     animate={{
+                         x: 0,
+                     }}
+                     exit={{
+                         x: window.innerWidth,
+                     }}
+        >
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
@@ -39,7 +50,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.main>
     )
 }
 
