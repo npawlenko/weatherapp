@@ -1,16 +1,16 @@
 /*
  *
  */
-const appConfig = require("./config/app.config");
+const appConfig = require("./config/application.json");
 
+const db = require("./database");
 const {app, router} = require("./server")(
     appConfig.server.port,
     appConfig.server.https
 );
-const db = require("./database/database");
 
 module.exports = {
     app: app,
     router: router,
-    database: db
+    db: db
 };
