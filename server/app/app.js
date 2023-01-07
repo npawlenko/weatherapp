@@ -3,7 +3,7 @@
  */
 const appConfig = require("./config/application.json");
 
-const db = require("./database");
+const db = require("./database/database");
 const {app, router} = require("./server")(
     appConfig.server.port,
     appConfig.server.https

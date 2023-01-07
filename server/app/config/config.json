@@ -1,14 +1,14 @@
 {
   "development": {
     "dialect": "sqlite",
-    "storage": "app/database/database.sqlite"
+    "storage": "app/database.sqlite"
   },
   "test": {
     "dialect": "sqlite",
-    "storage": "app/database/database.sqlite"
+    "storage": "app/database.sqlite"
   },
   "production": {
     "dialect": "sqlite",
-    "storage": "app/database/database.sqlite"
+    "storage": "app/database.sqlite"
   }
 }
