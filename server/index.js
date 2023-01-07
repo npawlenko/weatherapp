@@ -1,4 +1,3 @@
-const {app, router, database} = require("./app/app");
-
+const {app, router, db} = require("./app/app");
 
 
