@@ -1,5 +1,6 @@
 const fs = require("fs");
-
+const path = require("path");
+const { BASE_PATH } = require("./constants");
 const express = require("express");
 const router = express.Router();
 const app = express();
@@ -19,8 +20,8 @@ module.exports = (
 
         server = require("https");
         serverOptions = {
-            key: fs.readFileSync(httpsConfig.key),
-            cert: fs.readFileSync(httpsConfig.cert)
+            key: fs.readFileSync(path.resolve(BASE_PATH, httpsConfig.key)),
+            cert: fs.readFileSync(path.resolve(BASE_PATH, httpsConfig.cert))
         };
         console.log("Creating https server...");
     } else {
