@@ -19,7 +19,8 @@ function Home() {
                 );
             }
             else {
-                cityName.current.innerText = location.city;
+                console.log(location);
+                cityName.current.innerText = location.name;
             }
         });
     }, []);

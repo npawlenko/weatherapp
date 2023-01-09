@@ -1,6 +1,7 @@
 import {createContext, useState} from "react";
 import Constants from "../data/constants";
 import axios from "axios";
+import {serverAddress} from "../data/config";
 
 const initialState = {
     location: {}
@@ -33,6 +34,7 @@ export const GeolocationProvider = ({children}) => {
                 const coords = data.split(",");
                 const locationResponse = {
                     city: data.city,
+                    countryCode: data.country,
                     lat: coords[0],
                     lon: coords[1],
                 };
@@ -41,26 +43,23 @@ export const GeolocationProvider = ({children}) => {
                 setLocation(locationResponse);
                 // update localstorage
                 localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(locationResponse));
-
-
             })
             .catch(async () => {
-                await getNavigatorGeolocation()
-                    .then((coords) => {
-                        // TODO: call OpenWeatherMap Geolocation API
+                try {
+                    const coords = await getNavigatorGeolocation();
+                    const res = await axios
+                        .get(`${serverAddress}/location/georeverse?lat=${coords.latitude}&lon=${coords.longitude}`);
+                    if(res.data.error) {
+                        return;
+                    }
 
-                        const cityMock = "Białystok";
-                        const locationCoded = {
-                            city: cityMock,
-                            lat: coords.latitude,
-                            lon: coords.longitude
-                        };
-
-                        out = locationCoded;
-                        setLocation(locationCoded);
-                        // update localstorage
-                        localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(locationCoded));
-                    });
+                    out = res.data;
+                    setLocation(out);
+                    // update localstorage
+                    localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(out));
+                } catch (e) {
+                    console.error(e);
+                }
             });
 
         return out;
