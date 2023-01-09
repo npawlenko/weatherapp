@@ -26,7 +26,8 @@ export const GeolocationProvider = ({children}) => {
         }
 
         let out = {};
-        await axios.get("https://ipinfo.io/json")
+        await axios
+            .get("https://ipinfo.io/json")
             .then((response) => {
                 const data = response.data;
                 const coords = data.split(",");
