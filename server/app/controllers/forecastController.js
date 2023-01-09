@@ -3,24 +3,41 @@ function forecastController(db) {
     const {City, Forecast} = db;
     const {response} = require("./../helpers/requestHelper");
 
-    const forecastForCity = async (req, res) => {
+    const currentForecast = async (req, res) => {
         const {error: validationError, value: cityId} = Joi.number().integer().min(1).required()
             .validate(req.params.cityId);
         if (typeof validationError !== "undefined") {
             return res.send(response(validationError.message, false));
         }
 
-        const forecasts = await Forecast.findAll({
-            include: [{
-                model: City
-            }]
-        });
-        res.send(forecasts);
+        res.send("Not implemented yet");
     };
 
+    const todayForecast = async (req, res) => {
+        const {error: validationError, value: cityId} = Joi.number().integer().min(1).required()
+            .validate(req.params.cityId);
+        if (typeof validationError !== "undefined") {
+            return res.send(response(validationError.message, false));
+        }
+
+
+        res.send("Not implemented yet");
+    };
+
+    const fiveDayForecast = async (req, res) => {
+        const {error: validationError, value: cityId} = Joi.number().integer().min(1).required()
+            .validate(req.params.cityId);
+        if (typeof validationError !== "undefined") {
+            return res.send(response(validationError.message, false));
+        }
+
+        res.send("Not implemented yet");
+    };
 
     return {
-        forecastForCity
+        currentForecast,
+        todayForecast,
+        fiveDayForecast
     };
 }
 
