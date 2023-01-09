@@ -39,6 +39,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
+        tableName: 'City',
+        timestamps: false,
         modelName: 'City',
         indexes: [
             {

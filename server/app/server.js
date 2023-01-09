@@ -3,7 +3,7 @@ const path = require("path");
 const { BASE_PATH } = require("./constants");
 const express = require("express");
 const router = express.Router();
-const app = express();
+const expressApp = express();
 
 module.exports = (
     port,
@@ -30,13 +30,12 @@ module.exports = (
     }
 
     server
-        .createServer(serverOptions, app)
+        .createServer(serverOptions, expressApp)
         .listen(port, () => {
             console.log(`Server started at port ${port}`);
         });
 
     return {
-        app: app,
-        router: router
+        app: expressApp
     };
 };

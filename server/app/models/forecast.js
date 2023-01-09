@@ -69,6 +69,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
+        timestamps: false,
+        tableName: 'Forecast',
         modelName: 'Forecast',
     });
     return Forecast;
