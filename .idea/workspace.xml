@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Fix CORS error on frontend">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Implement current weather endpoint&#10;Fix Forecast foreign key column name">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controllers/forecastController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/forecastController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/migrations/20230107192812-create-forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/migrations/20230107192812-create-forecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/cityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/cityController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1671389715342" duration="12000" />
       <workItem from="1671391246800" duration="484000" />
       <workItem from="1671440490571" duration="2750000" />
-      <workItem from="1673279339422" duration="21810000" />
+      <workItem from="1673279339422" duration="23882000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673302724115</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implement current weather endpoint&#10;Fix Forecast foreign key column name">
+      <created>1673312308319</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673312308319</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +269,7 @@
     <MESSAGE value="Create skeleton for forecast endpoints" />
     <MESSAGE value="Connect getting location to API endpoint" />
     <MESSAGE value="Fix CORS error on frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix CORS error on frontend" />
+    <MESSAGE value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
   </component>
 </project>

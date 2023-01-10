@@ -1,6 +1,8 @@
 const Joi = require("joi");
 const {response} = require("../helpers/requestHelper");
 const {Op} = require("sequelize");
+const axios = require("axios");
+const integrations = require("./../config/integrations.json");
 
 function cityController(db) {
     const {City} = db;
@@ -43,8 +45,41 @@ function cityController(db) {
                }
            }
         });
+        if(cities.length) {
+            return res.send(cities);
+        }
 
-        res.send(cities);
+        try {
+            // TODO: req.params.q urlencode
+            const response = await axios
+                .get(`http://api.openweathermap.org/geo/1.0/direct?q=${req.params.q}&limit=100&appid=${integrations.openWeatherMap.apiKey}`);
+            const data = response.data;
+
+            const out = [];
+            for (const city of data) {
+                const found = await City.findOne({
+                    where: {
+                        name: city.name,
+                        countryCode: city.country
+                    }
+                });
+                if(!found) {
+                    out.push(await City.create({
+                        name: city.name,
+                        countryCode: city.country,
+                        state: city?.state,
+                        lat: city.lat,
+                        lon: city.lon
+                    }));
+                }
+            }
+
+            return res.send(out);
+        } catch(e) {
+            console.error(e);
+        }
+
+        res.send([]);
     };
 
     return {
