@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Fix CORS error on frontend">
+      <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/forecastController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/forecastController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/migrations/20230107192812-create-forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/migrations/20230107192812-create-forecast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IuFbEPkIzXMWctoauKPi64Aygi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/nodejs/node.exe" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\blink\WebstormProjects\weatherapp\client" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.start" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="" />
+      <created>1671023631150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671023631150</updated>
+      <workItem from="1671023632277" duration="1275000" />
+      <workItem from="1671052990827" duration="22389000" />
+      <workItem from="1671114962915" duration="22272000" />
+      <workItem from="1671389715342" duration="12000" />
+      <workItem from="1671391246800" duration="484000" />
+      <workItem from="1671440490571" duration="2750000" />
+      <workItem from="1673279339422" duration="21810000" />
+    </task>
+    <task id="LOCAL-00001" summary="Create default template">
+      <created>1671076213028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671076213028</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix warnings">
+      <created>1671076307930</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671076307930</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Make footer responsive, delete header bottom margin">
+      <created>1671115378492</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671115378492</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add AlertPopup and his context and hook">
+      <created>1671123120646</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671123120646</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Renamed from useGeolocation.js and remove unused variables">
+      <created>1671123155699</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671123155699</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update get coordinates from built in navigator">
+      <created>1671124718786</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671124718786</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Move frontend to client folder">
+      <created>1671134138828</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671134138828</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Remove unused imports">
+      <created>1671134331983</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671134331983</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add GeolocationContext">
+      <created>1671138874940</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671138874940</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add missing image assets">
+      <created>1671140605482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671140605482</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add about page and fix setting active link in Navbar">
+      <created>1671141391495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671141391495</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add page change animation">
+      <created>1671440612860</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671440612860</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update styles">
+      <created>1671440645153</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671440645153</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add routes and controllers">
+      <created>1673299265410</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673299265410</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed error">
+      <created>1673299341104</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673299341104</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Create skeleton for forecast endpoints">
+      <created>1673301311850</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673301311850</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Connect getting location to API endpoint">
+      <created>1673302711233</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673302711233</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix CORS error on frontend">
+      <created>1673302724115</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673302724115</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create default template" />
+    <MESSAGE value="Fix warnings" />
+    <MESSAGE value="Make footer responsive, delete header bottom margin" />
+    <MESSAGE value="Add AlertPopup and his context and hook" />
+    <MESSAGE value="Renamed from useGeolocation.js and remove unused variables" />
+    <MESSAGE value="Update get coordinates from built in navigator" />
+    <MESSAGE value="Move frontend to client folder" />
+    <MESSAGE value="Remove unused imports" />
+    <MESSAGE value="Add GeolocationContext" />
+    <MESSAGE value="Add missing image assets" />
+    <MESSAGE value="Add about page and fix setting active link in Navbar" />
+    <MESSAGE value="Add page change animation" />
+    <MESSAGE value="Update styles" />
+    <MESSAGE value="Add routes and controllers" />
+    <MESSAGE value="Fixed error" />
+    <MESSAGE value="Create skeleton for forecast endpoints" />
+    <MESSAGE value="Connect getting location to API endpoint" />
+    <MESSAGE value="Fix CORS error on frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix CORS error on frontend" />
+  </component>
+</project>
