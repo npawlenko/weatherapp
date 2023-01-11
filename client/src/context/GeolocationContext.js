@@ -1,7 +1,7 @@
 import {createContext, useState} from "react";
 import Constants from "../data/constants";
 import axios from "axios";
-import {serverAddress} from "../data/config";
+import {coordinatesToCity} from "../services/weatherAppService";
 
 const initialState = {
     location: {}
@@ -47,13 +47,9 @@ export const GeolocationProvider = ({children}) => {
             .catch(async () => {
                 try {
                     const coords = await getNavigatorGeolocation();
-                    const res = await axios
-                        .get(`${serverAddress}/location/georeverse?lat=${coords.latitude}&lon=${coords.longitude}`);
-                    if(res.data.error) {
-                        return;
-                    }
+                    const city = await coordinatesToCity(coords.latitude, coords. longitude);
 
-                    out = res.data;
+                    out = city;
                     setLocation(out);
                     // update localstorage
                     localStorage.setItem(Constants.LOCALSTORAGE_LOCATION, JSON.stringify(out));
