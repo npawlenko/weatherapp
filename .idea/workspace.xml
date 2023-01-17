@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Implement current weather endpoint&#10;Fix Forecast foreign key column name">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add weatherAppService.js">
+      <change afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/data/forecastTranslations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_01_2023_16_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_01_2023_16_49__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/weatherAppService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/weatherAppService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/controllers/cityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/cityController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/routes/cityRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/routes/cityRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,18 +55,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/nodejs/node.exe" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\blink\WebstormProjects\weatherapp\client" />
@@ -99,6 +111,12 @@
       <workItem from="1671391246800" duration="484000" />
       <workItem from="1671440490571" duration="2750000" />
       <workItem from="1673279339422" duration="23882000" />
+      <workItem from="1673372895384" duration="111000" />
+      <workItem from="1673434924158" duration="16092000" />
+      <workItem from="1673535733453" duration="1835000" />
+      <workItem from="1673556677547" duration="14000" />
+      <workItem from="1673563942829" duration="2048000" />
+      <workItem from="1673985177749" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -233,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673312308319</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add weatherAppService.js">
+      <created>1673439461625</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673439461625</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +295,7 @@
     <MESSAGE value="Connect getting location to API endpoint" />
     <MESSAGE value="Fix CORS error on frontend" />
     <MESSAGE value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
+    <MESSAGE value="Add weatherAppService.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add weatherAppService.js" />
   </component>
 </project>

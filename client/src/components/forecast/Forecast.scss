@@ -1,0 +1,72 @@
+.forecast {
+  position: relative;
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+
+  img {
+    width: 94px;
+    height: 94px;
+  }
+
+  .forecast-star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+
+
+
+    path {
+      fill: #e5e5e5;
+      transition: fill .2s ease;
+    }
+
+    .forecast-star-favourite {
+      fill: #e3e14b;
+    }
+  }
+}
+
+.Rain {
+  border: 1px solid #ababab;
+  background: linear-gradient(#09C6F9, #045DE9);
+}
+
+.Snow {
+  border: 1px solid #ababab;
+  background: linear-gradient(#8693AB, #BDD4E7);
+}
+
+.Thunderstorm {
+  border: 1px solid #ababab;
+  background: linear-gradient(#09203F, #537895);
+}
+
+.cloud-sun {
+  border: 1px solid #e5d9c5;
+  background: linear-gradient(#ECCC68, #D3D3D3);
+}
+
+.Clear {
+  border: 1px solid #e5d9c5;
+  background: linear-gradient(#F9D976, #F39F86);
+}
+
+.Haze {
+  background: linear-gradient(#a7b3b9, #727c81);
+  border: 1px solid #ababab;
+  color: #000;
+}
+
+.Fog {
+  backgroud: linear-gradient(#a7b3b9, #727c81);
+  border: 1px solid #ababab;
+}
+
+.Clouds {
+  color: #000;
+  border: 1px solid #d5d5d5;
+  background: linear-gradient(#CFD6E6, #E7EFF9);
+}

@@ -1,5 +1,6 @@
 const Constants = {
     LOCALSTORAGE_LOCATION: 'LOCATION',
+    LOCALSTORAGE_FAVOURITE_CITIES: 'FAVOURITES',
 
     UNITS_METRIC: 'metric',
     UNITS_IMPERIAL: 'imperial',
@@ -12,7 +13,17 @@ const Constants = {
     ALERT_INFO: 'info',
 
     ORIENTATION_VERTICAL: 'vertical',
-    ORIENTATION_HORIZONTAL: 'horizontal'
+    ORIENTATION_HORIZONTAL: 'horizontal',
+
+    DAY_OF_WEEK: [
+        'Poniedziałek',
+        'Wtorek',
+        'Środa',
+        'Czwartek',
+        'Piątek',
+        'Sobota',
+        'Niedziela'
+    ]
 };
 
 export default Constants;

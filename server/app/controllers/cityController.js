@@ -50,7 +50,6 @@ function cityController(db) {
         }
 
         try {
-            // TODO: req.params.q urlencode
             const response = await axios
                 .get(`http://api.openweathermap.org/geo/1.0/direct?q=${req.params.q}&limit=100&appid=${integrations.openWeatherMap.apiKey}`);
             const data = response.data;
@@ -82,9 +81,25 @@ function cityController(db) {
         res.send([]);
     };
 
+    const popularCities = async (req, res) => {
+        try {
+            const cities = await City.findAll({
+                limit: 6,
+                order: [
+                    ['visits', 'DESC']
+                ]
+            });
+            return res.send(cities);
+        } catch (e) {
+            console.error(e);
+        }
+        res.send([]);
+    };
+
     return {
         cityById,
-        citiesByName
+        citiesByName,
+        popularCities
     };
 }
 

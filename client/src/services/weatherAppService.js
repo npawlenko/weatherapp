@@ -19,6 +19,10 @@ export const findCityByName = async (name) => {
     return await request(`/city/find/${encodeURIComponent(name)}`);
 };
 
+export const popularCities = async () => {
+    return await request('/city/popular');
+};
+
 export const currentForecast = async (cityId) => {
     return await request(`/forecast/current/${cityId}`);
 };
