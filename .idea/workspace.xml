@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add weatherAppService.js">
-      <change afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/data/forecastTranslations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_01_2023_16_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_01_2023_16_49__Changes_.xml" beforeDir="false" />
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add popular cities and favourites">
+      <change afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/data/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/weatherAppService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/weatherAppService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app/controllers/cityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/cityController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/routes/cityRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/routes/cityRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/forecastController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/forecastController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -116,7 +116,12 @@
       <workItem from="1673535733453" duration="1835000" />
       <workItem from="1673556677547" duration="14000" />
       <workItem from="1673563942829" duration="2048000" />
-      <workItem from="1673985177749" duration="710000" />
+      <workItem from="1673985177749" duration="6564000" />
+      <workItem from="1673991927255" duration="334000" />
+      <workItem from="1674755185011" duration="1492000" />
+      <workItem from="1674775564802" duration="244000" />
+      <workItem from="1674780859276" duration="117000" />
+      <workItem from="1674783573735" duration="3860000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -258,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673439461625</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add popular cities and favourites">
+      <created>1673985947002</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1673985947002</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +308,7 @@
     <MESSAGE value="Fix CORS error on frontend" />
     <MESSAGE value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
     <MESSAGE value="Add weatherAppService.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add weatherAppService.js" />
+    <MESSAGE value="Add popular cities and favourites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add popular cities and favourites" />
   </component>
 </project>

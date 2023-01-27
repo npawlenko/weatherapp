@@ -38,13 +38,23 @@ function cityController(db) {
             return res.send(response(validationError.message, false));
         }
 
-        const cities = await City.findAll({
-           where: {
-               name: {
-                   [Op.like]: `${q}%`
-               }
-           }
-        });
+        const explodedQuery = req.params.q.split(',');
+        const name = explodedQuery[0];
+        const state = explodedQuery[1];
+        const country = explodedQuery[2];
+        console.log(explodedQuery);
+
+        const searchOptions = {
+            where: {
+                name: {
+                    [Op.like]: `${name}%`
+                }
+            }
+        };
+        if(state) searchOptions.where.state = {[Op.like]: `${state}%`};
+        if(country) searchOptions.where.countryCode = {[Op.like]: `${country}%`};
+
+        const cities = await City.findAll(searchOptions);
         if(cities.length) {
             return res.send(cities);
         }
