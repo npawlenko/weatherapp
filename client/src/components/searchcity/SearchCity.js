@@ -43,7 +43,7 @@ function SearchCity(props) {
                 <div className="search-results">
                     <ul className={resultsVisible ? " visible" : ""}>
                         {results.map(el =>
-                            <li><Link to={`/forecast/${el.id}`}>{el.name}, {el.state ? el.state+"," : ""} {el.countryCode}</Link></li>
+                            <li><Link to={`/forecast/${el.id}`}>{el.name}, {el.state ? el.state+"," : ""} <img className="flag" src={`https://flagsapi.com/${el?.countryCode}/shiny/64.png`} /> {el.countryCode}</Link></li>
                         )}
                     </ul>
                 </div>

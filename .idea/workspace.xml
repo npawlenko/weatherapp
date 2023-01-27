@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add searching cities">
-      <change afterPath="$PROJECT_DIR$/client/src/pages/city/City.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/city/City.scss" afterDir="false" />
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add city page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/assets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/city/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/city/City.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <workItem from="1674755185011" duration="1492000" />
       <workItem from="1674775564802" duration="244000" />
       <workItem from="1674780859276" duration="117000" />
-      <workItem from="1674783573735" duration="11751000" />
+      <workItem from="1674783573735" duration="11861000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -292,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674793649808</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add city page">
+      <created>1674795672788</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1674795672788</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +315,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create default template" />
     <MESSAGE value="Fix warnings" />
     <MESSAGE value="Make footer responsive, delete header bottom margin" />
     <MESSAGE value="Add AlertPopup and his context and hook" />
@@ -335,6 +339,7 @@
     <MESSAGE value="Add favourites and fix Mist forecast not showing up" />
     <MESSAGE value="Remove necessary console.log" />
     <MESSAGE value="Add searching cities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add searching cities" />
+    <MESSAGE value="Add city page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add city page" />
   </component>
 </project>
