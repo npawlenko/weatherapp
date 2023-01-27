@@ -1,6 +1,7 @@
 import logo from '../../assets/images/logo.png';
 import {Link, useLocation} from "react-router-dom";
 import './Navbar.scss';
+import SearchCity from "../searchcity/SearchCity";
 
 function Navbar() {
     const location = useLocation();
@@ -43,12 +44,7 @@ function Navbar() {
                             </li>
                         </ul>
 
-                        <form>
-                            <div className="input-group">
-                                <input type="text" className="form-control" placeholder="Wyszukaj miejscowość..." aria-describedby="searchButton"/>
-                                <button className="btn btn-outline-secondary" type="button" id="searchButton"><span className="icon icon-search"></span></button>
-                            </div>
-                        </form>
+                        <SearchCity />
                     </div>
 
 
