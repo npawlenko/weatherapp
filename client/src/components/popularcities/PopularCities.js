@@ -19,7 +19,7 @@ function PopularCities() {
         <div className="row">
             {getPopularCities.map((element, i) =>
                 <div key={i} className="col-12 mb-4 col-md-6 col-lg-4">
-                    <Forecast city={element.name} />
+                    <Forecast city={element.id} />
                 </div>
             )}
         </div>

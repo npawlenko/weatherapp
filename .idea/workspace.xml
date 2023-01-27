@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add popular cities and favourites">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Implemented todayForecast and fiveDayForecast controller action">
       <change afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/forecast/Forecast.js" afterDir="false" />
@@ -14,10 +13,8 @@
       <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/popularcities/PopularCities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/data/forecastTranslations.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/data/forecastTranslations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controllers/cityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/cityController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controllers/forecastController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/forecastController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -121,7 +118,7 @@
       <workItem from="1674755185011" duration="1492000" />
       <workItem from="1674775564802" duration="244000" />
       <workItem from="1674780859276" duration="117000" />
-      <workItem from="1674783573735" duration="3860000" />
+      <workItem from="1674783573735" duration="6608000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -270,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673985947002</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Implemented todayForecast and fiveDayForecast controller action">
+      <created>1674787551839</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674787551839</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +313,7 @@
     <MESSAGE value="Implement current weather endpoint&#10;Fix Forecast foreign key column name" />
     <MESSAGE value="Add weatherAppService.js" />
     <MESSAGE value="Add popular cities and favourites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add popular cities and favourites" />
+    <MESSAGE value="Implemented todayForecast and fiveDayForecast controller action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented todayForecast and fiveDayForecast controller action" />
   </component>
 </project>

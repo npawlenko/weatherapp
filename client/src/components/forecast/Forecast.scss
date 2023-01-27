@@ -8,24 +8,26 @@
     width: 94px;
     height: 94px;
   }
+}
 
-  .forecast-star {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 10px;
-    top: 10px;
+.forecast-star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  cursor: pointer;
 
 
 
-    path {
-      fill: #e5e5e5;
-      transition: fill .2s ease;
-    }
+  path {
+    fill: #e5e5e5;
+    transition: fill .2s ease;
+  }
 
-    .forecast-star-favourite {
-      fill: #e3e14b;
-    }
+  .forecast-star-favourite {
+    fill: #e3e14b;
   }
 }
 
@@ -54,15 +56,10 @@
   background: linear-gradient(#F9D976, #F39F86);
 }
 
-.Haze {
+.Haze, .Fog, .Mist {
   background: linear-gradient(#a7b3b9, #727c81);
   border: 1px solid #ababab;
   color: #000;
-}
-
-.Fog {
-  backgroud: linear-gradient(#a7b3b9, #727c81);
-  border: 1px solid #ababab;
 }
 
 .Clouds {

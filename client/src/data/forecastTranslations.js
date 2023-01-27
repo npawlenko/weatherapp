@@ -24,6 +24,10 @@ export default {
         icon: haze,
         translation: "Zamglenie"
     },
+    Mist: {
+        icon: haze,
+        translation: "Zamglenie"
+    },
     Drizzle: {
         icon: rain,
         translation: "Mżawka"

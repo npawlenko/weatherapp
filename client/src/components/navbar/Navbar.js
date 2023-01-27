@@ -33,7 +33,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse text-center text-lg-start" id="navbar-content">
                         <ul className="navbar-nav ms-auto me-auto">
                             <li className="nav-item">
-                                {generateLink("Ulubione", "/")}
+                                {generateLink("Ulubione", "/favourites")}
                             </li>
                             <li className="nav-item">
                                 {generateLink("Strona główna", "/")}
