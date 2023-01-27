@@ -36,7 +36,7 @@ function Favourites() {
                      }}
         >
             <div className="container">
-                <h1 className="space-below">Ulubione lokalizacje</h1>
+                <h1 className="mb-4">Ulubione lokalizacje</h1>
 
                 <div className="row">
                     {

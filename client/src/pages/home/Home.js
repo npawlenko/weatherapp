@@ -51,7 +51,7 @@ function Home() {
                     <div className="col-lg-8">
                         <h1>Dzień dobry!</h1>
                         <h4>Pogoda na teraz w <span className="fw-light">{getCity?.name ?? "twojej miejscowości"}</span></h4>
-                        <p>Naciśnij na prognozę aby zobaczyć więcej.</p>
+                        <p className="mb-4">Naciśnij na prognozę aby zobaczyć więcej.</p>
 
                         <div className="col-12 col-md-8">
                             <Forecast city={getCity?.id} state={getCity?.state} country={getCity?.name} />
