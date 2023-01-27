@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add city page">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add flags image api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/city/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/city/City.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,7 @@
       <workItem from="1674755185011" duration="1492000" />
       <workItem from="1674775564802" duration="244000" />
       <workItem from="1674780859276" duration="117000" />
-      <workItem from="1674783573735" duration="11861000" />
+      <workItem from="1674783573735" duration="16438000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -297,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674795672788</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add flags image api">
+      <created>1674795785024</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1674795785024</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +324,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix warnings" />
     <MESSAGE value="Make footer responsive, delete header bottom margin" />
     <MESSAGE value="Add AlertPopup and his context and hook" />
     <MESSAGE value="Renamed from useGeolocation.js and remove unused variables" />
@@ -340,6 +348,7 @@
     <MESSAGE value="Remove necessary console.log" />
     <MESSAGE value="Add searching cities" />
     <MESSAGE value="Add city page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add city page" />
+    <MESSAGE value="Add flags image api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add flags image api" />
   </component>
 </project>
