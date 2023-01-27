@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add flags image api">
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Fix margins and add MultiForecast to City">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/city/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/city/City.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/favourites/Favourites.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/controllers/forecastController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/forecastController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +110,7 @@
       <workItem from="1674755185011" duration="1492000" />
       <workItem from="1674775564802" duration="244000" />
       <workItem from="1674780859276" duration="117000" />
-      <workItem from="1674783573735" duration="16438000" />
+      <workItem from="1674783573735" duration="16714000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -306,7 +301,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674795785024</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add MultiForecast early implementation">
+      <created>1674801308850</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1674801308850</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fix margins and add MultiForecast to City">
+      <created>1674801338778</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1674801338778</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,8 +333,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make footer responsive, delete header bottom margin" />
-    <MESSAGE value="Add AlertPopup and his context and hook" />
     <MESSAGE value="Renamed from useGeolocation.js and remove unused variables" />
     <MESSAGE value="Update get coordinates from built in navigator" />
     <MESSAGE value="Move frontend to client folder" />
@@ -349,6 +356,8 @@
     <MESSAGE value="Add searching cities" />
     <MESSAGE value="Add city page" />
     <MESSAGE value="Add flags image api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flags image api" />
+    <MESSAGE value="Add MultiForecast early implementation" />
+    <MESSAGE value="Fix margins and add MultiForecast to City" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix margins and add MultiForecast to City" />
   </component>
 </project>

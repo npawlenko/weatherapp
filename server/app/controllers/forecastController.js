@@ -64,7 +64,7 @@ function forecastController(db) {
                }
            }
         });
-        if(cachedForecast) {
+        if(cachedForecast != null) {
            return res.send(cachedForecast);
         }
 
@@ -107,7 +107,7 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast && cachedForecast.length >= 8) {
+        if(cachedForecast.length >= 8) {
             return res.send(cachedForecast);
         }
 
@@ -156,7 +156,7 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast && cachedForecast.length >= 40) {
+        if(cachedForecast.length >= 40) {
             return res.send(cachedForecast);
         }
 
