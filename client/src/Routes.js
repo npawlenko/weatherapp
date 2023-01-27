@@ -5,6 +5,7 @@ import {AnimatePresence} from "framer-motion";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Favourites from "./pages/favourites/Favourites";
+import City from "./pages/city/City";
 
 function Routes() {
     const location = useLocation();
@@ -15,7 +16,7 @@ function Routes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/favourites" element={<Favourites/>} />
-                <Route path="/forecast/:cityId" />
+                <Route path="/forecast/:cityId" element={<City />} />
                 <Route path="*" />
             </ReactRoutes>
         </AnimatePresence>

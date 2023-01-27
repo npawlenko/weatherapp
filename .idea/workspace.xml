@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add favourites and fix Mist forecast not showing up">
-      <change afterPath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/searchcity/SearchCity.scss" afterDir="false" />
+    <list default="true" id="12a66265-8021-42f7-89c3-eff7d184021e" name="Changes" comment="Add searching cities">
+      <change afterPath="$PROJECT_DIR$/client/src/pages/city/City.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/city/City.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/multiforecast/MultiForecast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app/controllers/cityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/controllers/cityController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,7 @@
       <workItem from="1674755185011" duration="1492000" />
       <workItem from="1674775564802" duration="244000" />
       <workItem from="1674780859276" duration="117000" />
-      <workItem from="1674783573735" duration="9778000" />
+      <workItem from="1674783573735" duration="11751000" />
     </task>
     <task id="LOCAL-00001" summary="Create default template">
       <created>1671076213028</created>
@@ -277,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674790426354</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Remove necessary console.log">
+      <created>1674793637337</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674793637337</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add searching cities">
+      <created>1674793649808</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1674793649808</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +333,8 @@
     <MESSAGE value="Add popular cities and favourites" />
     <MESSAGE value="Implemented todayForecast and fiveDayForecast controller action" />
     <MESSAGE value="Add favourites and fix Mist forecast not showing up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add favourites and fix Mist forecast not showing up" />
+    <MESSAGE value="Remove necessary console.log" />
+    <MESSAGE value="Add searching cities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add searching cities" />
   </component>
 </project>
