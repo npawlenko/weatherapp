@@ -42,7 +42,6 @@ function cityController(db) {
         const name = explodedQuery[0];
         const state = explodedQuery[1];
         const country = explodedQuery[2];
-        console.log(explodedQuery);
 
         const searchOptions = {
             where: {
@@ -61,7 +60,7 @@ function cityController(db) {
 
         try {
             const response = await axios
-                .get(`http://api.openweathermap.org/geo/1.0/direct?q=${req.params.q}&limit=100&appid=${integrations.openWeatherMap.apiKey}`);
+                .get(`http://api.openweathermap.org/geo/1.0/direct?q=${req.params.q}&limit=100&lang=pl&appid=${integrations.openWeatherMap.apiKey}`);
             const data = response.data;
 
             const out = [];
