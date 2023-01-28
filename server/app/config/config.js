@@ -6,7 +6,6 @@ module.exports = {
   "development": {
     "dialect": "sqlite",
     "storage": path.resolve(BASE_PATH, "app/database.sqlite"),
-    "logging": true
   },
   "test": {
     "dialect": "sqlite",

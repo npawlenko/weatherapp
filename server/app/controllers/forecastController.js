@@ -4,6 +4,7 @@ const integrations = require("./../config/integrations.json");
 const {response} = require("../helpers/requestHelper");
 const {DAY, HOUR} = require("../constants");
 const { array } = require("joi");
+const { Sequelize } = require("../models");
 
 function forecastController(db) {
     const Joi = require("joi");
@@ -19,8 +20,8 @@ function forecastController(db) {
         });
     };
 
-    const buildForecast = async (data, city) => {
-          return await Forecast.create({
+    const buildForecast = (data, city) => {
+          return {
             main: data.weather[0].main,
             description: data.weather[0].description,
             date: data?.dt ? new Date(data?.dt * 1000) : new Date(),
@@ -35,7 +36,7 @@ function forecastController(db) {
             rain: data?.rain?.['1h'] ?? data?.rain?.['3h'],
             snow: data?.snow?.['1h'] ?? data?.snow?.['3h'],
             CityId: city.id
-        });
+        };
     };
 
 
@@ -58,7 +59,7 @@ function forecastController(db) {
         }
 
         const cachedForecast = await Forecast.findOne({
-           where: {
+            where: {
                cityId: cityId,
                date: {
                    [Op.between]: [startDate, endDate]
@@ -74,7 +75,7 @@ function forecastController(db) {
                 .get(`https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&units=metric&lang=pl&appid=${integrations.openWeatherMap.apiKey}`);
             const data = response.data;
 
-            const newForecast = await buildForecast(data, city);
+            const newForecast = await Forecast.create(buildForecast(data, city));
 
             return res.send(newForecast);
         } catch(e) {
@@ -108,11 +109,7 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast.length === 8) {
-            return res.send(cachedForecast);
-        }
-        else if(cachedForecast.length > 8) {
-            cachedForecast = cachedForecast.slice(0, 8);
+        if(cachedForecast.length >= 8) {
             return res.send(cachedForecast);
         }
 
@@ -125,10 +122,14 @@ function forecastController(db) {
             let out = [];
             for(let i in data.list) {
                 const forecast = data.list[i];
-                const newForecast = await buildForecast(forecast, city);
+                const newForecast = buildForecast(forecast, city);
                 out.push(newForecast);
             }
-            out = out.slice(0, 8);
+            Forecast.bulkCreate(out, {
+                ignoreDuplicates: true
+            });
+
+            out = out.splice(0, 8);
             return res.send(out);
         } catch(e) {
             console.error(e);
@@ -161,11 +162,7 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast.length === 40) {
-            return res.send(cachedForecast);
-        }
-        else if(cachedForecast.length > 40) {
-            cachedForecast = cachedForecast.slice(0, 40);
+        if(cachedForecast.length >= 40) {
             return res.send(cachedForecast);
         }
 
@@ -175,12 +172,15 @@ function forecastController(db) {
                 .get(`https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&units=metric&lang=pl&appid=${integrations.openWeatherMap.apiKey}`);
             const data = response.data;
 
-            const out = [];
+            let out = [];
             for(let i in data.list) {
                 const forecast = data.list[i];
-                const newForecast = await buildForecast(forecast, city);
+                const newForecast = buildForecast(forecast, city);
                 out.push(newForecast);
             }
+            Forecast.bulkCreate(out, {
+                ignoreDuplicates: true
+            });
             return res.send(out);
         } catch(e) {
             console.error(e);

@@ -69,6 +69,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
+        indexes: [
+            {
+                unique: true,
+                fields: ['date', 'cityId']
+            }
+        ],
         timestamps: false,
         tableName: 'Forecast',
         modelName: 'Forecast',

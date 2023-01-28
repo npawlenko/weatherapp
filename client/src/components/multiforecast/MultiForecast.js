@@ -45,15 +45,16 @@ function MultiForecast(props) {
                             const dayNow = new Date().getDay();
                             for(let i=0; i<5; i++) {
                                 const thatDayForecasts = forecast.filter(el => new Date(el.date).getDay() === (i+dayNow) % 7);
+                                console.log(thatDayForecasts);
                                 generalizedForecast.push({
                                     ...thatDayForecasts[0],
                                     main: thatDayForecasts.slice(1).reduce(
-                                        (prev, next) => weatherDisplayHierarchy[prev] > weatherDisplayHierarchy[next.main] ? prev : next.main,
-                                        thatDayForecasts[0].main
+                                        (prev, next) => weatherDisplayHierarchy[prev] > weatherDisplayHierarchy[next.main] ? prev : next?.main,
+                                        thatDayForecasts[0]?.main
                                     ),
                                     temperature: thatDayForecasts.slice(1).reduce(
-                                        (prev, next) => (prev+next.temperature)/2,
-                                        thatDayForecasts[0].temperature
+                                        (prev, next) => (prev+next?.temperature)/2,
+                                        thatDayForecasts[0]?.temperature
                                     )
                                 });
                             }
@@ -78,12 +79,13 @@ function MultiForecast(props) {
                 setForecast(forecast);
             });
         }
+        console.log(props.type)
     }, [props]);
 
     return (
         <div className="multiforecast">
             <div className="row justify-content-center align-items-center">
-                {
+                { props.type === 1 ?
                     getForecast.map(el =>
                         <div key={el.id} className="col-12 col-sm-6 text-center col-md">
                             <img className="" width="60px" src={forecastTranslations[el?.main]?.icon} alt="weather" />
@@ -93,6 +95,18 @@ function MultiForecast(props) {
                             <p className="mb-0">{
                                 Constants.DAY_OF_WEEK[new Date(el.date).getDay()] + ", " +
                                 dateFormat(new Date(el.date), "hammerTime")
+                            }</p>
+                        </div>
+                    )
+                :
+                    getForecast.map(el =>
+                        <div key={el.id} className="col-12 col-sm-6 text-center col-md">
+                            <img className="" width="60px" src={forecastTranslations[el?.main]?.icon} alt="weather" />
+
+                            <p className="fs-7 mb-1">{forecastTranslations[el?.main]?.translation}</p>
+                            <h4 className="mb-1">{el.temperature.toFixed()}°C</h4>
+                            <p className="mb-0">{
+                                Constants.DAY_OF_WEEK[new Date(el.date).getDay()]
                             }</p>
                         </div>
                     )
