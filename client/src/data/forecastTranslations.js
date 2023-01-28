@@ -1,10 +1,10 @@
-import cloud from "../assets/images/cloud.png";
-import thunder from "../assets/images/thunderstorm.png";
-import rain from "../assets/images/rain.png";
-import snow from "../assets/images/snow.png";
-import sun from "../assets/images/sun.png";
-import fog from "../assets/images/fog.png";
-import haze from "../assets/images/haze.png";
+import cloud from "./../assets/images/cloud.png";
+import thunder from "./../assets/images/thunderstorm.png";
+import rain from "./../assets/images/rain.png";
+import snow from "./../assets/images/snow.png";
+import sun from "./../assets/images/sun.png";
+import fog from "./../assets/images/fog.png";
+import haze from "./../assets/images/haze.png";
 
 
 export default {
