@@ -17,7 +17,7 @@ function locationController(db) {
 
     const reverseGeocoder = async (req, res) => {
         if(!geocoderReady) {
-            return res.send(response("Geocoder is not ready to use. Please try again in a while.", false));
+            return res.status(500).send(response("Geocoder is not ready to use. Please try again in a while.", false));
         }
 
         const schema = Joi.object({
@@ -28,7 +28,7 @@ function locationController(db) {
         });
         const {error: validationError, value: coordinates} = schema.validate(req.query);
         if(typeof validationError !== "undefined") {
-            return res.send(response(validationError.message, false));
+            return res.status(400).send(response(validationError.message, false));
         }
 
         geocoder.lookUp({
@@ -36,7 +36,7 @@ function locationController(db) {
             longitude: coordinates.lon
         }, 1, async (err, data) => {
             if(err) {
-                return res.send(response(err, false));
+                return res.status(500).send(response(err, false));
             }
 
             data = data[0][0];
