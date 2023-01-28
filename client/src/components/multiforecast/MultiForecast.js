@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {findCityById, fiveDayForecast, todayForecast} from "../../services/weatherAppService";
 import forecastTranslations from "../../data/forecastTranslations";
 import dateFormat, {masks} from "dateformat";
+import Constants from "../../data/constants";
 
 function MultiForecast(props) {
     masks.hammerTime = 'HH:MM';
@@ -53,12 +54,15 @@ function MultiForecast(props) {
             <div className="row justify-content-center align-items-center">
                 {
                     getForecast.map(el =>
-                        <div key={el.id} className="col-12 col-sm-6 text-center col-md-2 mb-5">
-                            <img className="float-start align-middle" width="60px" src={forecastTranslations[el?.main]?.icon} alt="weather" />
+                        <div key={el.id} className="col-12 col-sm-6 text-center col-md">
+                            <img className="" width="60px" src={forecastTranslations[el?.main]?.icon} alt="weather" />
 
                             <p className="fs-7 mb-1">{forecastTranslations[el?.main]?.translation}</p>
-                            <h4 className="mb-1">{el?.temperature.toFixed()}°C</h4>
-                            <p className="mb-0">{dateFormat(new Date(el?.date), "hammerTime")}</p>
+                            <h4 className="mb-1">{el.temperature.toFixed()}°C</h4>
+                            <p className="mb-0">{
+                                Constants.DAY_OF_WEEK[new Date(el.date).getDay()] + ", " +
+                                dateFormat(new Date(el.date), "hammerTime")
+                            }</p>
                         </div>
                     )
                 }
