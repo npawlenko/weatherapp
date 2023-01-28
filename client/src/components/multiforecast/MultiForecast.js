@@ -26,8 +26,40 @@ function MultiForecast(props) {
                             forecast = await todayForecast(city.id);
                             break;
                         case 2:
+                            let generalizedForecast = [];
+                            const weatherDisplayHierarchy = {
+                                Thunderstorm: 10,
+                                Snow: 9,
+                                Rain: 8,
+                                Drizzle: 7,
+                                Clear: 6,
+                                Clouds: 5,
+                                Mist: 4,
+                                Fog: 3,
+                                Haze: 2,
+                                Mist: 1,
+                            };
                             forecast = await fiveDayForecast(city.id);
-                            //TODO: foreach day make summary
+                            
+
+                            const dayNow = new Date().getDay();
+                            for(let i=0; i<5; i++) {
+                                const thatDayForecasts = forecast.filter(el => new Date(el.date).getDay() === (i+dayNow) % 7);
+                                generalizedForecast.push({
+                                    ...thatDayForecasts[0],
+                                    main: thatDayForecasts.slice(1).reduce(
+                                        (prev, next) => weatherDisplayHierarchy[prev] > weatherDisplayHierarchy[next.main] ? prev : next.main,
+                                        thatDayForecasts[0].main
+                                    ),
+                                    temperature: thatDayForecasts.slice(1).reduce(
+                                        (prev, next) => (prev+next.temperature)/2,
+                                        thatDayForecasts[0].temperature
+                                    )
+                                });
+                            }
+
+                            forecast = generalizedForecast;
+                        
                             break;
                     }
 
@@ -44,7 +76,6 @@ function MultiForecast(props) {
             fetchCityAndForecast().then(({city, forecast}) => {
                 setCity(city);
                 setForecast(forecast);
-                console.log(forecast);
             });
         }
     }, [props]);
