@@ -3,6 +3,7 @@ const {Op} = require("sequelize");
 const integrations = require("./../config/integrations.json");
 const {response} = require("../helpers/requestHelper");
 const {DAY, HOUR} = require("../constants");
+const { array } = require("joi");
 
 function forecastController(db) {
     const Joi = require("joi");
@@ -52,7 +53,7 @@ function forecastController(db) {
         endDate.setTime(endDate.getTime() + HOUR);
 
         const city = await getCity(cityId);
-        if(!city) {
+        if(city === null) {
             return res.send(response("City not found", false));
         }
 
@@ -64,7 +65,7 @@ function forecastController(db) {
                }
            }
         });
-        if(cachedForecast != null) {
+        if(cachedForecast !== null) {
            return res.send(cachedForecast);
         }
 
@@ -90,7 +91,7 @@ function forecastController(db) {
         }
 
         const city = await getCity(cityId);
-        if(!city) {
+        if(city === null) {
             return res.send(response("City not found", false));
         }
 
@@ -99,7 +100,7 @@ function forecastController(db) {
         const endDate = new Date(startDate);
         endDate.setTime(endDate.getTime() + DAY);
 
-        const cachedForecast = await Forecast.findAll({
+        let cachedForecast = await Forecast.findAll({
             where: {
                 cityId: cityId,
                 date: {
@@ -107,7 +108,11 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast.length >= 8) {
+        if(cachedForecast.length === 8) {
+            return res.send(cachedForecast);
+        }
+        else if(cachedForecast.length > 8) {
+            cachedForecast = cachedForecast.slice(0, 8);
             return res.send(cachedForecast);
         }
 
@@ -148,7 +153,7 @@ function forecastController(db) {
         const endDate = new Date(startDate);
         endDate.setTime(endDate.getTime() + DAY*5);
 
-        const cachedForecast = await Forecast.findAll({
+        let cachedForecast = await Forecast.findAll({
             where: {
                 cityId: cityId,
                 date: {
@@ -156,7 +161,11 @@ function forecastController(db) {
                 }
             }
         });
-        if(cachedForecast.length >= 40) {
+        if(cachedForecast.length === 40) {
+            return res.send(cachedForecast);
+        }
+        else if(cachedForecast.length > 40) {
+            cachedForecast = cachedForecast.slice(0, 40);
             return res.send(cachedForecast);
         }
 
