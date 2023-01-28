@@ -45,7 +45,6 @@ function MultiForecast(props) {
                             const dayNow = new Date().getDay();
                             for(let i=0; i<5; i++) {
                                 const thatDayForecasts = forecast.filter(el => new Date(el.date).getDay() === (i+dayNow) % 7);
-                                console.log(thatDayForecasts);
                                 generalizedForecast.push({
                                     ...thatDayForecasts[0],
                                     main: thatDayForecasts.slice(1).reduce(
@@ -79,7 +78,6 @@ function MultiForecast(props) {
                 setForecast(forecast);
             });
         }
-        console.log(props.type)
     }, [props]);
 
     return (

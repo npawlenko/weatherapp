@@ -10,7 +10,6 @@ function SearchCity(props) {
 
     window.addEventListener('click', (e) => {
         const target = e.target;
-        console.log(target.parentNode);
         if(e.target.parentNode?.id === "searchButton"
             || e.target.id === "searchButton")
             return;
@@ -23,7 +22,10 @@ function SearchCity(props) {
 
         async function search() {
             const q = input.current.value;
-            return await findCityByName(q);
+            if(q.length > 0) {
+                return await findCityByName(q);
+            } 
+            return [];
         }
 
         search().then(r => {
