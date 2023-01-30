@@ -44,7 +44,7 @@ function locationController(db) {
                 name: data.name,
                 ...coordinates,
                 countryCode: data.countryCode,
-                state: data?.admin1Code?.name,
+                state: data?.admin1Code?.name ?? null,
             };
             const similarCity = await City.findOne({
                 where: {
@@ -53,7 +53,7 @@ function locationController(db) {
                     state: cityData.state
                 }
             });
-            if(!similarCity) {
+            if(similarCity !== null) {
                 const city = City.create(cityData);
                 return res.send(city);
             }
