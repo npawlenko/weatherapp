@@ -54,10 +54,10 @@ function locationController(db) {
                 }
             });
             if(similarCity !== null) {
-                const city = City.create(cityData);
-                return res.send(city);
+                return res.send(similarCity);
             }
-            res.send(similarCity);
+            const city = await City.create(cityData);
+            return res.send(city);
         });
     };
 
