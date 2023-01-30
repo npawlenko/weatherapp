@@ -37,7 +37,6 @@ function MultiForecast(props) {
                                 Mist: 4,
                                 Fog: 3,
                                 Haze: 2,
-                                Mist: 1,
                             };
                             forecast = await fiveDayForecast(city.id);
                             
